@@ -1,32 +1,31 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./components/Home";
-
-function Recipe() {
-  return <div>recipe</div>;
-}
+import Home from "./page/Home";
+import Recipe from "./page/Recipe";
 
 function Footer() {
-  return <div>footer</div>;
+  return <div className="bg-black">footer</div>;
 }
 
 function App() {
   return (
     <Router>
-      <Header />
-      <section className="section has-background-warning-light">
-        <div className="container">
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/recipe" exact>
-              <Recipe />
-            </Route>
-          </Switch>
-        </div>
-      </section>
-      <Footer />
+      <div>
+        <Header />
+        <section className="section bg-black">
+          <div className="container">
+            <Switch>
+              <Route path="/" exact>
+                <Home />
+              </Route>
+              <Route path="/recipe/:name" exact>
+                <Recipe />
+              </Route>
+            </Switch>
+          </div>
+        </section>
+        <Footer />
+      </div>
     </Router>
   );
 }
