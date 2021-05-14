@@ -3,7 +3,7 @@ function Header() {
     <div className="hero is-small bg-black">
       <div className="hero-body">
         <div className="container">
-          <div className="title has-text-white"> Detivtive Conan Bar</div>
+          <div className="title has-text-white"> Detective Conan Bar</div>
         </div>
       </div>
     </div>
