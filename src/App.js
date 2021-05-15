@@ -12,7 +12,10 @@ function App() {
     <Router>
       <div>
         <Header />
-        <section className="section bg-black">
+        <section
+          className="section bg-black"
+          style={{ paddingTop: "24px", paddingBottom: "24px" }}
+        >
           <div className="container">
             <Switch>
               <Route path="/" exact>
