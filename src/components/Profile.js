@@ -39,9 +39,16 @@ function Profile(data) {
   }
 
   return (
-    <div className="border" style={{ height: "350px" }}>
-      <h2 className="text-xl text-center py-2">{data.data.name}</h2>
-      <div className="flex">
+    <div
+      //className="border"
+      style={{
+        height: "auto",
+        backgroundColor:
+          data.data.name.length % 2 === 0 ? "rgb(44 45 49)" : "#232323",
+      }}
+    >
+      <h2 className="text-2xl text-center py-3">{data.data.name}</h2>
+      <div className="flex p-3 ">
         {idx[0] !== -1 ? (
           <img
             className="origin-center"
@@ -55,17 +62,17 @@ function Profile(data) {
             style={{ width: "35%", height: "35%", paddingRight: "0px 15px" }}
           ></img>
         )}
-        <p
-          className="text-sm"
-          style={{ minHeight: "30%" }}
-          className="origin-center"
-        >
+        <p style={{ minHeight: "30%" }} className="text-sm origin-center px-2">
           {data.data.character}
         </p>
       </div>
-      <div className="text-sm p-4 origin-center">{data.data.detail}</div>
-      <div className="text-center">
-        <Link to={`/recipe/${data.data.name}`}>カクテルを見る</Link>
+      <div className="text-sm pt-5 px-4 origin-center">{data.data.detail}</div>
+      <div className="text-center pt-3 pb-5">
+        {data.data.data ? (
+          <Link to={`/recipe/${data.data.name}`}>カクテルを見る</Link>
+        ) : (
+          <p style={{ color: "grey" }}>ごめんね。準備中だよ！</p>
+        )}
       </div>
     </div>
   );
