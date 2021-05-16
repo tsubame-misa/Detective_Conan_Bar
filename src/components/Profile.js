@@ -67,9 +67,11 @@ function Profile(data) {
         </p>
       </div>
       <div className="text-sm pt-5 px-4 origin-center">{data.data.detail}</div>
-      <div className="text-center pt-3 pb-5">
+      <div className="text-center pt-3 pb-5 has-text-danger">
         {data.data.data ? (
-          <Link to={`/recipe/${data.data.name}`}>カクテルを見る</Link>
+          <Link to={`/recipe/${data.data.name}`} className="has-text-link">
+            カクテルを見る
+          </Link>
         ) : (
           <p style={{ color: "grey" }}>ごめんね。準備中だよ！</p>
         )}
