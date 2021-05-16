@@ -1,5 +1,5 @@
 function RecipeDetail(data) {
-  console.log(data);
+  //console.log(data);
   return (
     <div className="m-4 border p-4">
       <h1 className="text-2xl">{data.data.cocktail_name}</h1>
