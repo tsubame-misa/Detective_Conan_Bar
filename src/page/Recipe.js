@@ -11,7 +11,7 @@ function Recipe() {
     fetchRecipe(name).then((data) => {
       setRecipe(data.cocktails);
     });
-  }, [name]);
+  }, []);
   return (
     <div className="has-text-white">
       <h1 className="p-4 text-3xl">{name}を使ったカクテル</h1>

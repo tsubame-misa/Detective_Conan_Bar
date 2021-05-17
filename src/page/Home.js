@@ -3,7 +3,6 @@ import { data } from "../data/member";
 import Profile from "../components/Profile";
 
 function Home() {
-  //console.log(data);
   return (
     <div className="section has-text-white">
       <h1

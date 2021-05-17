@@ -10,6 +10,8 @@ import ライImg from "../img/ライ.PNG";
 import バーボンImg from "../img/バーボン.PNG";
 import sampleImg from "../img/sample.PNG";
 import シェリーImg from "../img/シェリー.PNG";
+import キュラソーImg from "../img/キュラソー.PNG";
+
 const imgData = [
   { name: "ジン", img: ジンImg },
   { name: "ウォッカ", img: ウォッカImg },
@@ -21,6 +23,10 @@ const imgData = [
   {
     name: "シェリー",
     img: シェリーImg,
+  },
+  {
+    name: "キュラソー",
+    img: キュラソーImg,
   },
 ];
 
