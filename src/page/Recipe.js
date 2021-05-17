@@ -6,16 +6,17 @@ import { fetchRecipe } from "../api";
 
 function Recipe() {
   const { name } = useParams();
-  const [recipe, setRecipe] = useState();
+  const [recipe, setRecipe] = useState([]);
   useEffect(() => {
     fetchRecipe(name).then((data) => {
       setRecipe(data.cocktails);
     });
   }, []);
+  console.log(recipe);
   return (
     <div className="has-text-white">
       <h1 className="p-4 text-3xl">{name}を使ったカクテル</h1>
-      {recipe?.map((item, key) => {
+      {recipe.map((item, key) => {
         return <RecipeDetail data={item} key={key} />;
       })}
       <Link to="/home"></Link>
