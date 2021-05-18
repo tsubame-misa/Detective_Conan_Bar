@@ -6,9 +6,16 @@ function RecipeDetail(data) {
 
   /*該当のお酒を使ってないものはuse=falseで表示しない*/
   for (let r of data.data.recipes) {
-    if (r.ingredient_name.includes(name)) {
-      use = true;
-      break;
+    if (name === "ジン") {
+      if (r.ingredient_name === name) {
+        use = true;
+        break;
+      }
+    } else {
+      if (r.ingredient_name.includes(name)) {
+        use = true;
+        break;
+      }
     }
   }
 
