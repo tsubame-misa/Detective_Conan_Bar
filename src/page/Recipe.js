@@ -12,10 +12,14 @@ function Recipe() {
       setRecipe(data.cocktails);
     });
   }, []);
-  console.log(recipe);
+
   return (
     <div className="has-text-white">
-      <h1 className="p-4 text-3xl">{name}を使ったカクテル</h1>
+      {name === "キール" ? (
+        <h1 className="p-4 text-3xl">{name}のレシピ</h1>
+      ) : (
+        <h1 className="p-4 text-3xl">{name}を使ったカクテル</h1>
+      )}
       {recipe.map((item, key) => {
         return <RecipeDetail data={item} key={key} />;
       })}

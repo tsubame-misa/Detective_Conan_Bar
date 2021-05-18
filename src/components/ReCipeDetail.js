@@ -1,4 +1,26 @@
+import { useParams } from "react-router";
+
 function RecipeDetail(data) {
+  const { name } = useParams();
+  let use = false;
+
+  /*該当のお酒を使ってないものはuse=falseで表示しない*/
+  for (let r of data.data.recipes) {
+    if (r.ingredient_name.includes(name)) {
+      use = true;
+      break;
+    }
+  }
+
+  /*キールはそもそもカクテルなので例外*/
+  if (name === "キール") {
+    use = true;
+  }
+
+  if (!use) {
+    return <div></div>;
+  }
+
   return (
     <div className="m-4 border p-4">
       <h1 className="text-2xl">{data.data.cocktail_name}</h1>

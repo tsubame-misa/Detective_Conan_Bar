@@ -1,5 +1,5 @@
 {
-  "name": "Detective_Conan_Bar",
+  "name": "detective conan bar",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -44,5 +44,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "https://cocktail-f.com"
 }

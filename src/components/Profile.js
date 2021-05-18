@@ -46,7 +46,6 @@ function Profile(data) {
 
   return (
     <div
-      //className="border"
       style={{
         height: "auto",
         backgroundColor:
