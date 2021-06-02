@@ -16,7 +16,7 @@ function Home() {
           {data.map((item, key) => {
             return (
               <div className="column is-4" key={key}>
-                <Profile data={item} key={key} />
+                <Profile data={item} key={key} n={key} />
               </div>
             );
           })}

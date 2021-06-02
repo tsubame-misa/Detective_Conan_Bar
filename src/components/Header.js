@@ -3,7 +3,7 @@ function Header() {
     <div className="hero is-small bg-black">
       <div
         className="hero-body"
-        style={{ backgroundColor: "rgb(44 45 49)", marginTop: "1.5rem" }}
+        style={{ backgroundColor: "rgb(84 84 84)", marginTop: "1.5rem" }}
       >
         <div className="container">
           <p className="has-text-white" style={{ fontFamily: "fantasy" }}>
